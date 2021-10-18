@@ -95,7 +95,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
-					<onclick>PlayerControl(Previous)</onclick>
+						<onclick>Seek(-7)</onclick>
+					<visible>Player.PauseEnabled</visible>
 				</control>
 				<control type="radiobutton" id="602">
 					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/play.png</textureradioonfocus>
@@ -114,13 +115,14 @@
 					<radioposy>0</radioposy>
 					<selected>Player.Paused</selected>
 					<onclick>PlayerControl(Play)</onclick>
+					<visible>Player.PauseEnabled</visible>
 				</control>
 				<control type="radiobutton" id="605">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 					</include>
-					<onclick>PlayerControl(Next)</onclick>
-					<visible>MusicPlayer.HasNext</visible>
+					<onclick>Seek(30)</onclick>
+					<visible>Player.PauseEnabled</visible>
 				</control>
 				<control type="radiobutton" id="642">
 					<include content="OSDButton">
