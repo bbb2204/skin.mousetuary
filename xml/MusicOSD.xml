@@ -96,7 +96,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 					</include>
 						<onclick>Seek(-7)</onclick>
-					<visible>Player.PauseEnabled</visible>
+					<visible>Player.SeekEnabled</visible>
 				</control>
 				<control type="radiobutton" id="602">
 					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/play.png</textureradioonfocus>
@@ -122,7 +122,7 @@
 						<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 					</include>
 					<onclick>Seek(30)</onclick>
-					<visible>Player.PauseEnabled</visible>
+					<visible>Player.SeekEnabled</visible>
 				</control>
 				<control type="radiobutton" id="642">
 					<include content="OSDButton">
