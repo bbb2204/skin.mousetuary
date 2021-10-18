@@ -1,6 +1,6 @@
 # skin.mousetuary
 Mousetuary is a Kodi skin, derived from the Kodi default skin "Estuary" (at 1.9.11 on the krypton branch of phil65/skin.estuary)
-This is the "leia" branch.
+This is the "matrix" branch.
 
 The aims of Mousetuary are: 
 - to cater to PVR users better (little else has changed from Estuary, apart from mouse controls)
@@ -9,5 +9,5 @@ The aims of Mousetuary are:
 
 There is an optional keymap to allow WMC-like scrolling in the EPG, and guide selection from live TV with ctrl-g. After installation, move wmc-keymap.xml and guidekey.py into the userdata/keymaps folder. (the rules for skins won't allow keymaps to be automatically installed)
 
-Note on versioning: addon.xml references xbmc.gui version 14, for Leia RC5 and preumably the released version. Betas and RC's up to 4 require version 13.
+Note on versioning: addon.xml references xbmc.gui version 15 for Matrix.
 
