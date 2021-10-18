@@ -27,7 +27,7 @@ class DynamicOSD(xbmcgui.WindowXMLDialog):
       
 # These do not change - let Kodi do the scaling. 
       screen_width = 1920
-      screen_height = (1920 * self.getHeight()) / self.getWidth()
+      screen_height = int((1920 * self.getHeight()) / self.getWidth())
 
 # Synthesise a progress bar out of buttons. 
 # We do this because ControlProgress does not reliably appear, and we can't interact with controls in the XML.
@@ -76,7 +76,7 @@ class DynamicOSD(xbmcgui.WindowXMLDialog):
       tsDuration = min(self.subtract_times(tsEnd, tsStart), self.subtract_times(tsEnd, startTime))
       self.progWidth = 0
       if duration > 0:
-         self.progWidth = (tsDuration * self.barWidth) / duration
+         self.progWidth = int((tsDuration * self.barWidth) / duration)
       self.setLabel(3, str(startTime) + " for " + str(duration))
       self.setLabel(4, "TS: " + str(tsStart) + " to " + str(tsEnd) + " for " + str(tsDuration))
 
@@ -94,7 +94,7 @@ class DynamicOSD(xbmcgui.WindowXMLDialog):
 # Protect division by zero (some DVD lead-in tracks come up with zero duration)
       self.progX = 0
       if duration > 0:
-         self.progX = (tsStart * self.barWidth) / duration
+         self.progX = int((tsStart * self.barWidth) / duration)
       
 # Update the width and position of the progress bar. Setting a button to a zero width seems
 # to produce strange results, so in this case just hide the thing.
